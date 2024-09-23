@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Pro Gamer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a0f2c;
+            color: #d1d5db;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .neon-button {
+            background-color: #1f2937;
+            border: 2px solid transparent;
+            border-radius: 0.5rem;
+            color: #d1d5db;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        .neon-button:hover {
+            border-color: #14b8a6;
+            box-shadow: 0 0 10px #14b8a6, 0 0 20px #14b8a6, 0 0 30px #14b8a6;
+        }
+        .neon-card:hover {
+            box-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6, 0 0 30px #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-dark-blue text-gray-300">
+    <!-- Navigation Bar -->
+    <nav class="w-full p-4 flex justify-between items-center bg-gray-900">
+        <div class="text-xl font-bold text-white">E-Sports Coaching</div>
+        <div>
+            <a href="#" class="text-white text-2xl"><i class="fas fa-user-circle"></i></a>
+        </div>
+    </nav>
+
+    <!-- Find a Pro Gamer Page -->
+    <div class="min-h-screen flex flex-col items-center justify-center text-center py-12">
+        <div class="w-full max-w-4xl p-8">
+            <h2 class="text-4xl font-bold text-white mb-8">Find a Pro Gamer</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div class="neon-card p-4 bg-gray-800 rounded-lg">
+                    <img src="https://placehold.co/100x100" alt="Game 1 Logo" class="mx-auto mb-2">
+                    <p>Game 1</p>
+                </div>
+                <div class="neon-card p-4 bg-gray-800 rounded-lg">
+                    <img src="https://placehold.co/100x100" alt="Game 2 Logo" class="mx-auto mb-2">
+                    <p>Game 2</p>
+                </div>
+                <div class="neon-card p-4 bg-gray-800 rounded-lg">
+                    <img src="https://placehold.co/100x100" alt="Game 3 Logo" class="mx-auto mb-2">
+                    <p>Game 3</p>
+                </div>
+                <div class="neon-card p-4 bg-gray-800 rounded-lg">
+                    <img src="https://placehold.co/100x100" alt="Game 4 Logo" class="mx-auto mb-2">
+                    <p>Game 4</p>
+                </div>
+            </div>
+            <div class="w-full max-w-2xl mx-auto">
+                <form class="bg-gray-800 p-8 rounded-lg">
+                    <div class="mb-4">
+                        <label for="rank" class="block text-sm font-medium text-white">Rank</label>
+                        <select id="rank" class="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-base">
+                            <option>Bronze</option>
+                            <option>Silver</option>
+                            <option>Gold</option>
+                            <option>Platinum</option>
+                            <option>Diamond</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-white">Randomize or Specify Pro</label>
+                        <div class="flex items-center mt-2">
+                            <input id="randomize" name="pro" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" checked>
+                            <label for="randomize" class="ml-3 block text-sm font-medium text-white">Randomize</label>
+                        </div>
+                        <div class="flex items-center mt-2">
+                            <input id="specify" name="pro" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                            <label for="specify" class="ml-3 block text-sm font-medium text-white">Specify</label>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <button type="submit" class="neon-button">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="w-full max-w-4xl p-8 mt-12">
+            <h2 class="text-3xl font-bold text-white mb-4">Hot Picks</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="neon-card p-4 bg-gray-800 rounded-lg">
+                    <h3 class="text-xl font-bold text-white mb-2">Pro Gamer 1</h3>
+                    <img src="https://placehold.co/100x100" alt="Pro Gamer 1" class="mx-auto mb-2">
+                    <p class="text-sm text-gray-400 mb-2">Rank: Diamond</p>
+                    <p class="text-sm text-gray-400 mb-2">Specialty: Sniper</p>
+                    <p class="text-sm text-gray-400 mb-4">$50/hour</p>
+                    <a href="#" class="neon-button">Book Now</a>
+                </div>
+                <div class="neon-card p-4 bg-gray-800 rounded-lg">
+                    <h3 class="text-xl font-bold text-white mb-2">Pro Gamer 2</h3>
+                    <img src="https://placehold.co/100x100" alt="Pro Gamer 2" class="mx-auto mb-2">
+                    <p class="text-sm text-gray-400 mb-2">Rank: Platinum</p>
+                    <p class="text-sm text-gray-400 mb-2">Specialty: Support</p>
+                    <p class="text-sm text-gray-400 mb-4">$40/hour</p>
+                    <a href="#" class="neon-button">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
