@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatroom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a0f2c;
+            color: #d1d5db;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .neon-button {
+            background-color: #1f2937;
+            border: 2px solid transparent;
+            border-radius: 0.5rem;
+            color: #d1d5db;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        .neon-button:hover {
+            border-color: #14b8a6;
+            box-shadow: 0 0 10px #14b8a6, 0 0 20px #14b8a6, 0 0 30px #14b8a6;
+        }
+        .nav-icon {
+            color: #d1d5db;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .nav-icon:hover {
+            color: #14b8a6;
+        }
+    </style>
+</head>
+<body class="bg-dark-blue text-gray-300">
+    <!-- Sidebar Navigation -->
+    <div class="flex h-screen">
+        <nav class="w-1/5 bg-gray-900 p-4 flex flex-col justify-between">
+            <div>
+                <div class="text-xl font-bold text-white mb-8">E-Sports Coaching</div>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="#" class="flex items-center space-x-2 text-white">
+                            <i class="fas fa-comments nav-icon"></i>
+                            <span>Chat</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center space-x-2 text-white">
+                            <i class="fas fa-book nav-icon"></i>
+                            <span>My Courses</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center space-x-2 text-white">
+                            <i class="fas fa-history nav-icon"></i>
+                            <span>Purchase History</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center space-x-2 text-white">
+                            <i class="fas fa-question-circle nav-icon"></i>
+                            <span>Help Center</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <a href="#" class="flex items-center space-x-2 text-white">
+                    <i class="fas fa-sign-out-alt nav-icon"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Chat Interface -->
+        <div class="w-4/5 flex flex-col">
+            <!-- Chat Header -->
+            <div class="bg-gray-800 p-4 flex justify-between items-center">
+                <div class="text-xl font-bold text-white">Chatroom</div>
+                <div class="flex space-x-4">
+                    <button class="neon-button flex items-center space-x-2">
+                        <i class="fas fa-phone"></i>
+                        <span>Voice Call</span>
+                    </button>
+                    <button class="neon-button flex items-center space-x-2">
+                        <i class="fas fa-video"></i>
+                        <span>Video Call</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Body -->
+            <div class="flex-1 flex overflow-hidden">
+                <!-- Chat List -->
+                <div class="w-1/4 bg-gray-900 p-4 overflow-y-auto">
+                    <div class="mb-4">
+                        <input type="text" class="w-full p-2 bg-gray-700 border border-gray-600 rounded-md focus:ring-indigo-500 focus:border-indigo-500" placeholder="Search...">
+                    </div>
+                    <ul class="space-y-4">
+                        <li class="bg-gray-800 p-4 rounded-lg cursor-pointer hover:bg-gray-700">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://placehold.co/40x40" alt="User Avatar" class="rounded-full">
+                                <div>
+                                    <p class="font-bold">User 1</p>
+                                    <p class="text-sm text-gray-400">Last message...</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="bg-gray-800 p-4 rounded-lg cursor-pointer hover:bg-gray-700">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://placehold.co/40x40" alt="User Avatar" class="rounded-full">
+                                <div>
+                                    <p class="font-bold">User 2</p>
+                                    <p class="text-sm text-gray-400">Last message...</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Chat Window -->
+                <div class="w-3/4 flex flex-col bg-gray-800 p-4 overflow-y-auto">
+                    <div class="flex-1">
+                        <div class="mb-4">
+                            <div class="flex justify-between">
+                                <div class="text-sm text-gray-400">User 1</div>
+                                <div class="text-sm text-gray-400">12:45 PM</div>
+                            </div>
+                            <div class="mt-2 text-white">Hello! Ready to start your coaching session?</div>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex justify-between">
+                                <div class="text-sm text-gray-400">You</div>
+                                <div class="text-sm text-gray-400">12:46 PM</div>
+                            </div>
+                            <div class="mt-2 text-white">Yes, let's go!</div>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex">
+                        <input type="text" class="flex-1 p-2 bg-gray-700 border border-gray-600 rounded-md focus:ring-indigo-500 focus:border-indigo-500" placeholder="Type a message...">
+                        <button class="neon-button ml-2">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
