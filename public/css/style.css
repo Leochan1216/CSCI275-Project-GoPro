@@ -24,3 +24,26 @@ h1, h2, h3, h4, h5, h6 {
 .neon-card:hover {
     box-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6, 0 0 30px #3b82f6;
 }
+
+/* Add this to your style.css or inside a <style> tag in the HTML file */
+.min-h-screen {
+    background: url("https://img.freepik.com/free-photo/galactic-night-sky-astronomy-science-combined-generative-ai_188544-9656.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.min-h-screen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust the opacity to make it translucent */
+    z-index: 0;
+}
+
+.min-h-screen > * {
+    position: relative;
+    z-index: 1;
+}
