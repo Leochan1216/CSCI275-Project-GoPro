@@ -8,40 +8,100 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+
+
+        input, select {
+            background-color: #1a1a1a;
+            color: #fff;
+            border: 1px solid #5a5a5a;
+            border-radius: 5px;
+            padding: 0.5rem;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 5px #2563eb;
+        }
+    </style>
 </head>
 <body>
-    <header class="flex justify-between p-4 bg-gray-900">
-        <div class="text-2xl font-bold neon">GoPro Gaming</div>
-        <nav>
-            <ul class="flex space-x-4">
-                <li><a href="#" class="text-white">Find Coaches</a></li>
-                <li><a href="#" class="text-white">Bootcamp</a></li>
-                <li><a href="#" class="text-white">Login</a></li>
-                <li><a href="#" class="text-white">Sign Up</a></li>
-            </ul>
+    <!-- Header -->
+    <header class="bg-gray-800 p-4">
+        <nav class="flex justify-between items-center">
+          <ul class="flex space-x-4">
+            <li><a href="index.html" class="text-2xl font-bold neon">GoPro Gamming</a></li>
+            <li><a href="findcoach.html" class="text-white">Find Coaches</a></li>
+            <li><a href="browse-bootcamps.html" class="text-white">Bootcamp</a></li>
+            <li><a href="customerAC.html" class="text-white">Account</a></li>
+            <li><a href="Chat.html" class="text-white">Chatroom</a></li>
+            <li><a href="cartnew.html" class="text-white">Cart</a></li>
+            <li><a href="phistory.html" class="text-white">Purchase History</a></li>
+          </ul>
+          <ul class="flex space-x-4">
+            <li><a href="reportboostcamp.html" class="text-white">Report</a></li>
+            <li><a href="Contactus.html" class="text-white">Contact Us</a></li>
+            <li><a href="FQA" class="text-white">Get Help/Support</a></li>
+            <li><a href="#" class="text-white">Logout</a></li>
+          </ul>
         </nav>
-    </header>
+      </header>
+
+
     <main class="p-8">
-        <h1 class="text-4xl font-bold neon mb-4">Browse Your Bootcamp</h1>
-        <div class="mb-4">
-            <input type="text" placeholder="Search" class="w-full p-2 rounded bg-gray-800 text-white border border-gray-600">
-        </div>
-        <div class="flex space-x-4 mb-4">
-            <button class="button p-2 rounded">Filter</button>
-            <button class="button p-2 rounded">Filter</button>
-            <button class="button p-2 rounded">Filter</button>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="card-browser-bootcamp"></div>
-            <div class="card-browser-bootcamp"></div>
-            <div class="card-browser-bootcamp"></div>
-            <div class="card-browser-bootcamp"></div>
-            <div class="card-browser-bootcamp"></div>
-            <div class="card-browser-bootcamp"></div>
-            <div class="card-browser-bootcamp"></div>
-            <div class="card-browser-bootcamp"></div>
-            <div class="card-browser-bootcamp"></div>
-        </div>
+        <section class="max-w-6xl mx-auto">
+            <h1 class="text-4xl font-bold neon mb-6">Browse Your Bootcamp</h1>
+
+
+            <div class="mb-6 flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
+                <input type="text" placeholder="Search Bootcamps" class="w-full md:w-1/2 p-2 bg-gray-800 text-white border border-gray-600 rounded">
+                <div class="flex space-x-4">
+                    <select class="p-2">
+                        <option value="" disabled selected>Filter by game</option>
+                        <option value="fps">FPS</option>
+                        <option value="moba">MOBA</option>
+                        <option value="strategy">Strategy</option>
+                    </select>
+                    <select class="p-2">
+                        <option value="" disabled selected>Filter by Difficulty</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                    <select class="p-2">
+                        <option value="" disabled selected>Filter by Price</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Bootcamp Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="card p-4 text-center">
+                    <div class="h-32 bg-gray-700 rounded mb-4"></div>
+                    <h3 class="text-lg font-bold">Bootcamp Title</h3>
+                    <p class="text-sm text-gray-400">Brief Description</p>
+                </div>
+                <div class="card p-4 text-center">
+                    <div class="h-32 bg-gray-700 rounded mb-4"></div>
+                    <h3 class="text-lg font-bold">Bootcamp Title</h3>
+                    <p class="text-sm text-gray-400">Brief Description</p>
+                </div>
+                <div class="card p-4 text-center">
+                    <div class="h-32 bg-gray-700 rounded mb-4"></div>
+                    <h3 class="text-lg font-bold">Bootcamp Title</h3>
+                    <p class="text-sm text-gray-400">Brief Description</p>
+                </div>
+                <div class="card p-4 text-center">
+                    <div class="h-32 bg-gray-700 rounded mb-4"></div>
+                    <h3 class="text-lg font-bold">Bootcamp Title</h3>
+                    <p class="text-sm text-gray-400">Brief Description</p>
+                </div>
+            </div>
+        </section>
     </main>
-</body> 
+</body>
 </html>

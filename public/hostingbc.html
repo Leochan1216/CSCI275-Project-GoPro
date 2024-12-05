@@ -32,7 +32,7 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="bg-gray-800 text-gray-800 p-4">
+  <header class="bg-gray-800 text-white p-4">
     <nav class="flex justify-between items-center">
       <ul class="flex space-x-4">
         <li><a href="#" class="text-2xl font-bold neon">GoPro Gamming</a></li>
@@ -46,31 +46,26 @@
 
   <!-- Main Content -->
   <main class="p-8">
-    <section class="max-w-6xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+    <section class="max-w-6xl mx-auto p-6 rounded-lg shadow-lg card-hostbootcamp">
       <h1 class="header-title mb-6">BootCamp</h1>
 
       <!-- Video Section -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Video Placeholder -->
+        <!-- Video Upload Form -->
         <div class="upload-section">
-          <video controls class="w-full rounded-lg">
-            <source src="#" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p class="mt-2 text-gray-500">Upload your bootcamp video</p>
+          <label for="video-upload" class="block text-gray-700 text-lg font-bold mb-2">
+            Upload Your BootCamp Video
+          </label>
+          <input type="file" id="video-upload" name="video-upload" accept="video/*" class="w-full text-gray-900 mb-4">
+          <input type="text" id="title" name="title" placeholder="Enter Title of the BoostCamp" class="w-full p-2 border border-gray-300 rounded-lg text-gray-800">
+          <button class="mt-4 px-6 py-2 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600">
+            Upload Video
+          </button>
         </div>
 
         <!-- BootCamp Description -->
-        <div class="space-y-4 text-gray-800">
-          <p>
-            <strong>Sharpen your aim and elevate your FPS gameplay!</strong> 🎯 In this bootcamp video, we cover the ultimate aiming drills, positioning tactics, and communication strategies to excel in various FPS games. Get ready to level up!
-          </p>
-          <p>
-            <strong>Welcome to the Game Name Pro Bootcamp!</strong> 🎮 This session focuses on mastering lane control, hero selection, and game-winning rotations. Perfect for both casual gamers and competitive climbers.
-          </p>
-          <p>
-            <strong>Drop in, gear up, and survive!</strong> 🪂 In this Battle Royale Bootcamp, you’ll learn advanced looting paths, positioning techniques, and endgame strategies to dominate the battlefield.
-          </p>
+        <div class="space-y-4">
+          <textarea id="messageofvideo" name="messageofvideo" rows="5" placeholder="Describe the BoostCamp" class="w-full p-2 border border-gray-300 rounded-lg text-gray-800"></textarea>
         </div>
       </div>
 

@@ -1,7 +1,16 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-image: linear-gradient(#1a1a1a, rgb(55, 42, 73));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     color: #ffffff;
-    font-family: Orbitron;
+    font-family: Orbitron, sans-serif;
 }
 
 .neon {
@@ -12,11 +21,12 @@ body {
     background-color: #2a2a2a;
     border: 1px solid rgb(157, 166, 243);
     border-radius: 10px;
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .card:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card-login {
@@ -35,6 +45,12 @@ body {
     padding: 2rem;
     margin: 2rem auto;
     max-width: 600px;
+}
+
+.card-hostbootcamp {
+  background-color: #2a2a3c;
+  border: 1px solid rgb(157, 166, 243);
+  border-radius: 10px;
 }
 
 .card-browser-bootcamp {
@@ -134,4 +150,76 @@ button:focus {
     padding: 8px 12px; /* Add padding for better text visibility */
     background-color: #ffffff; /* White background for text fields */
     border: 1px solid #ddd; /* Light border */
+  }
+
+
+
+
+
+  .carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh; /* Fullscreen height */
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-slide {
+    flex: 0 0 100%;
+    position: relative;
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    transition: filter 0.5s ease-in-out;
+  }
+  
+  .carousel-link {
+    display: block;
+    position: relative;
+  }
+  
+  .carousel-text {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .carousel-slide:hover img {
+    filter: blur(4px);
+  }
+  
+  .carousel-slide:hover .carousel-text {
+    opacity: 1;
+    transform: translate(-50%, 0);
+    font-size: 3rem;
+  }
+  
+  /* Buttons */
+  .carousel-btn {
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .carousel-btn:hover {
+    background-color: #1a202c;
   }
