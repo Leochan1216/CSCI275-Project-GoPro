@@ -8,12 +8,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/coustomerchat.js"></script>
+</head>
 <body>
   <!-- Header -->
-  <header class="bg-gray-800 text-white p-4">
+  <header class="bg-gray-900 text-white p-4">
     <nav class="flex justify-between items-center">
       <ul class="flex space-x-4">
-        <li><a href="index.html" class="text-2xl font-bold neon">GoPro Gamming</a></li>
+        <li><a href="indexC(login).html" class="text-2xl font-bold neon">GoPro Gaming</a></li>
         <li><a href="findcoach.html" class="text-white">Find Coaches</a></li>
         <li><a href="browse-bootcamps.html" class="text-white">Bootcamp</a></li>
         <li><a href="customerAC.html" class="text-white">Account</a></li>
@@ -24,8 +26,8 @@
       <ul class="flex space-x-4">
         <li><a href="reportboostcamp.html" class="text-white">Report</a></li>
         <li><a href="Contactus.html" class="text-white">Contact Us</a></li>
-        <li><a href="FQA" class="text-white">Get Help/Support</a></li>
-        <li><a href="#" class="text-white">Logout</a></li>
+        <li><a href="FQA.html" class="text-white">Get Help/Support</a></li>
+        <li><a href="Tindex(logout).html" class="text-white">Logout</a></li>
       </ul>
     </nav>
   </header>
@@ -37,38 +39,56 @@
         <!-- User List -->
         <aside class="col-span-1 bg-gray-100 rounded-lg shadow p-4">
           <h2 class="text-lg font-bold text-gray-800 mb-4">Users</h2>
-          <ul class="space-y-2">
-            <li class="p-2 bg-white text-gray-800 rounded-lg shadow">User #1</li>
-            <li class="p-2 bg-white text-gray-800 rounded-lg shadow">User #2</li>
-            <li class="p-2 bg-white text-gray-800 rounded-lg shadow">User #3</li>
+          <ul id="userList" class="space-y-2">
+            <li>
+              <button 
+                data-username="Coach #1" 
+                class="p-2 bg-white text-gray-800 rounded-lg shadow w-full text-left">
+                Coach #1
+              </button>
+            </li>
+            <li>
+              <button 
+                data-username="Coach #2" 
+                class="p-2 bg-white text-gray-800 rounded-lg shadow w-full text-left">
+                Coach #2
+              </button>
+            </li>
+            <li>
+              <button 
+                data-username="Coach #3" 
+                class="p-2 bg-white text-gray-800 rounded-lg shadow w-full text-left">
+                Coach #3
+              </button>
+            </li>
           </ul>
         </aside>
 
         <!-- Chat Section -->
         <div class="col-span-3 flex flex-col bg-gray-50 rounded-lg shadow p-4 h-[600px]">
           <!-- Chat Header -->
-          <div class="flex justify-between items-center border-b pb-4 mb-4">
-            <h2 class="text-lg font-bold text-gray-800">Coach Name</h2>
+          <div id="chatHeader" class="flex justify-between items-center border-b pb-4 mb-4">
+            <h2 class="text-lg font-bold text-gray-800">coach #1</h2>
             <div class="flex space-x-4">
               <button class="px-4 py-2 bg-blue-500 text-white rounded-lg">Voice Call</button>
-              <button class="px-4 py-2 bg-red-500 text-white rounded-lg">Report</button>
+              <a href="reportboostcamp.html" class="px-4 py-2 bg-red-500 text-white rounded-lg">Report</a>
             </div>
           </div>
 
           <!-- Chat Messages -->
-          <div class="flex-grow overflow-y-auto mb-4 bg-gray-100 p-4 rounded-lg">
+          <div id="chatMessages" class="flex-grow overflow-y-auto mb-4 bg-gray-100 p-4 rounded-lg">
             <div class="space-y-4">
               <!-- Left Message -->
               <div class="flex items-start space-x-4">
                 <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
                 <div class="bg-white text-black p-4 rounded-lg shadow">
-                  <p>Hi there! How can I help?</p>
+                  <p>Hello! How can I assist you?</p>
                 </div>
               </div>
               <!-- Right Message -->
               <div class="flex items-start space-x-4 justify-end">
                 <div class="bg-blue-500 text-white p-4 rounded-lg shadow">
-                  <p>Thank you! I need help with my gameplay strategy.</p>
+                  <p>I need help with my gameplay strategy.</p>
                 </div>
                 <div class="w-8 h-8 bg-gray-300 rounded-full"></div>
               </div>
@@ -77,9 +97,15 @@
 
           <!-- Chat Input -->
           <div class="flex items-center space-x-2">
-            <button class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-xl">
+            <label for="fileInput" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-xl cursor-pointer text-gray-800">
               +
-            </button>
+            </label>
+            <input 
+              type="file" 
+              id="fileInput" 
+              class="hidden"
+              accept=".jpg, .png, .pdf"
+            >
             <input 
               type="text" 
               placeholder="Type a message..." 
@@ -91,5 +117,3 @@
       </div>
     </section>
   </main>
-</body>
-</html>

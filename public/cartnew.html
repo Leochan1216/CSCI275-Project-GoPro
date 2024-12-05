@@ -8,25 +8,31 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-</head>
-</head>
+  <style>
+    /* Ensure the images fit nicely inside the buttons */
+    .payment-image {
+      width: 24px;
+      height: 24px;
+    }
+  </style>
 <body>
   <!-- Header -->
-  <header class="bg-gray-800 text-white p-4">
+  <header class="bg-gray-900 p-4">
     <nav class="flex justify-between items-center">
       <ul class="flex space-x-4">
-        <li><a href="#" class="text-2xl font-bold neon">GoPro Gaming</a></li>
-        <li><a href="#" class="text-white">Find Coaches</a></li>
+        <li><a href="indexC(login).html" class="text-2xl font-bold neon">GoPro Gaming</a></li>
+        <li><a href="findcoach.html" class="text-white">Find Coaches</a></li>
         <li><a href="browse-bootcamps.html" class="text-white">Bootcamp</a></li>
-        <li><a href="#" class="text-white">Account</a></li>
-        <li><a href="#" class="text-white">Chatroom</a></li>
-        <li><a href="#" class="text-white">Cart</a></li>
-        <li><a href="#" class="text-white">Purchase History</a></li>
+        <li><a href="customerAC.html" class="text-white">Account</a></li>
+        <li><a href="Chat.html" class="text-white">Chatroom</a></li>
+        <li><a href="cartnew.html" class="text-white">Cart</a></li>
+        <li><a href="phistory.html" class="text-white">Purchase History</a></li>
       </ul>
       <ul class="flex space-x-4">
-        <li><a href="#" class="text-white">Report</a></li>
-        <li><a href="#" class="text-white">Contact Us</a></li>
-        <li><a href="#" class="text-white">Get Help/Support</a></li>
+        <li><a href="reportboostcamp.html" class="text-white">Report</a></li>
+        <li><a href="Contactus.html" class="text-white">Contact Us</a></li>
+        <li><a href="FQA.html" class="text-white">Get Help/Support</a></li>
+        <li><a href="Tindex(logout).html" class="text-white">Logout</a></li>
       </ul>
     </nav>
   </header>
@@ -63,9 +69,18 @@
         
         <!-- Payment Methods -->
         <div class="flex justify-around mb-4">
-          <button class="bg-gray-200 px-4 py-2 rounded-lg shadow">Paypal</button>
-          <button class="bg-gray-200 px-4 py-2 rounded-lg shadow">Visa</button>
-          <button class="bg-gray-200 px-4 py-2 rounded-lg shadow">Master</button>
+          <button class="flex items-center bg-gray-200 px-4 py-2 rounded-lg shadow">
+            <img src="image/paypal.jpg" alt="PayPal" class="payment-image mr-2">
+            Paypal
+          </button>
+          <button class="flex items-center bg-gray-200 px-4 py-2 rounded-lg shadow">
+            <img src="image/visa.png" alt="Visa" class="payment-image mr-2">
+            Visa
+          </button>
+          <button class="flex items-center bg-gray-200 px-4 py-2 rounded-lg shadow">
+            <img src="image/master.jpg" alt="MasterCard" class="payment-image mr-2">
+            Master
+          </button>
         </div>
         
         <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 rounded-lg shadow">

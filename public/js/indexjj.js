@@ -25,5 +25,5 @@ function moveToPreviousSlide() {
 leftButton.addEventListener('click', moveToPreviousSlide);
 rightButton.addEventListener('click', moveToNextSlide);
 
-// Auto-scroll every 5 seconds
+// Auto-scroll every 10 seconds
 setInterval(moveToNextSlide, 10000);

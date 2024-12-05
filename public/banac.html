@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ban Account - Input</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-100">
+    <header class="bg-gray-800 text-white p-4">
+        <nav class="flex justify-between items-center">
+          <ul class="flex space-x-4">
+            <li><a href="indexA(login).html" class="text-2xl font-bold neon">GoPro Admin</a></li>
+            <li><a href="adminac.html" class="text-white">Account</a></li>
+            <li><a href="banac.html" class="text-white">Ban</a></li>
+            <li><a href="refundrequest.html" class="text-white">RefundRequests</a></li>
+            <li><a href="reportrespond.html" class="text-white">Report</a></li>
+            <li><a href="validateprog.html" class="text-white">ValidateCoach</a></li>
+          </ul>
+        <ul>
+          <li><a href="Tindex(logout).html" class="text-white">Logout</a></li>
+        </ul>
+        </nav>
+      </header>
+
+
+  <main class="p-8">
+    <section class="max-w-4xl mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
+      <h2 class="text-xl font-bold mb-4">Input Account Type and ID</h2>
+      <form action="ban.html" method="get">
+        <div class="mb-4">
+          <label for="account-type" class="block font-bold mb-2 text-white">Customer/ProGamer:</label>
+          <select id="account-type" name="account-type" class="w-full p-2 border border-gray-300 rounded-lg text-gray-800" required>
+            <option value="" disabled selected>Select Type</option>
+            <option value="customer">Customer</option>
+            <option value="progamer">Pro Gamer</option>
+          </select>
+        </div>
+        <div class="mb-4">
+          <label for="id" class="block font-bold mb-2">ID:</label>
+          <input type="text" id="id" name="id" placeholder="Enter ID" class="w-full p-2 border border-gray-300 rounded-lg text-gray-800" required>
+        </div>
+        <button type="submit" class="px-6 py-2 bg-blue-500 text-white font-bold rounded-lg"  onclick="">Next</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

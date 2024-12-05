@@ -3,122 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ban Account</title>
+  <title>Ban Account - Details</title>
   <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-  <style>
-    /* Additional custom styling */
-    .ban-header {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 24px;
-      font-weight: bold;
-    }
-    .profile-picture {
-      width: 150px;
-      height: 150px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background-color: #f3f4f6;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      color: #6b7280;
-    }
-    button:hover {
-      background-color: #2563eb;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Header -->
   <header class="bg-gray-800 text-white p-4">
-    <nav class="flex justify-between items-center">
+    <nav class="flex justify-between">
       <ul class="flex space-x-4">
-        <li><a href="#" class="text-2xl font-bold">GoPro Admin</a></li>
-        <li><a href="#" class="text-white">Account</a></li>
-        <li><a href="#" class="text-white">Ban</a></li>
-        <li><a href="#" class="text-white">RefundRequests</a></li>
-        <li><a href="#" class="text-white">Report</a></li>
-        <li><a href="#" class="text-white">ValidateCoach</a></li>
+          <li><a href="indexA(login).html" class="text-xl font-bold neon">GoPro Admin</a></li>
+          <li><a href="banac.html" class="hover:underline">Ban</a></li>
+          <li><a href="refundrequest.html" class="hover:underline">Refund Requests</a></li>
+          <li><a href="reportrespond.html" class="hover:underline">Report</a></li>
+          <li><a href="validateprog.html" class="hover:underline">Validate Coach</a></li>
       </ul>
-    </nav>
+      <ul>
+          <li><a href="Tindex(logout).html" class="hover:underline">Logout</a></li>
+      </ul>
+  </nav>
   </header>
 
-  <!-- Main Content -->
   <main class="p-8">
-    <section class="max-w-6xl mx-auto bg-gray p-6 rounded-lg shadow-lg">
-      <h1 class="ban-header mb-6">Ban Account</h1>
-      <form>
-        <!-- Selection Section -->
-        <div class="mb-6 flex items-center space-x-4">
-          <label for="account-type" class="font-bold">Customer/ProGamer:</label>
-          <select id="account-type" name="account-type" class="p-2 border border-gray-300 rounded-lg">
-            <option value="" disabled selected>Select Type</option>
-            <option value="customer">Customer</option>
-            <option value="progamer">Pro Gamer</option>
-          </select>
-          <label for="id" class="font-bold">ID:</label>
-          <input type="text" id="id" name="id" placeholder="Enter ID" class="p-2 border border-gray-300 rounded-lg">
+    <section class="max-w-6xl mx-auto bg-gray-800 p-6 rounded-lg shadow-lg text-gray-800">
+      <h2 class="text-xl font-bold mb-4">Account Details</h2>
+      <div class="mb-4">
+        <p><strong>Account Type:</strong> Pro Gamer</p>
+        <p><strong>UserID#:</strong> 000000</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-800">
+        <div>
+          <p><strong>UserName:</strong> ProGamer123</p>
+          <p><strong>Email:</strong> progamer@example.com</p>
+          <p><strong>Phone Number:</strong> 123-456-7890</p>
+          <p><strong>Gender:</strong> Male</p>
+          <p><strong>Date of Birth:</strong> 01/01/2000</p>
         </div>
-
-        <!-- Account Details -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- Details Section -->
-          <div>
-            <p class="mb-4"><strong>UserID#:</strong> 000000</p>
-
-            <div class="mb-4">
-              <label for="username" class="block font-bold mb-2">UserName:</label>
-              <input type="text" id="username" name="username" placeholder="Enter username" class="w-full p-2 border border-gray-300 rounded-lg">
-            </div>
-
-            <div class="mb-4">
-              <label for="email" class="block font-bold mb-2">Email:</label>
-              <input type="email" id="email" name="email" placeholder="Enter email" class="w-full p-2 border border-gray-300 rounded-lg">
-            </div>
-
-            <div class="mb-4">
-              <label for="phone" class="block font-bold mb-2">Phone Number:</label>
-              <input type="tel" id="phone" name="phone" placeholder="Enter phone number" class="w-full p-2 border border-gray-300 rounded-lg">
-            </div>
-
-            <div class="mb-4 flex items-center space-x-4">
-              <label for="gender" class="font-bold">Gender:</label>
-              <select id="gender" name="gender" class="p-2 border border-gray-300 rounded-lg">
-                <option value="" disabled selected>Select Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-              </select>
-
-              <label for="dob" class="font-bold">Date of Birth:</label>
-              <input type="date" id="dob" name="dob" value="2024-01-01" class="p-2 border border-gray-300 rounded-lg">
-            </div>
-          </div>
-
-          <!-- Profile Picture -->
-          <div class="text-center">
-            <div class="profile-picture mb-4">
-              <p>Image</p>
-            </div>
+        <div class="text-center">
+          <div class="profile-picture mb-4">
+            <img src="https://via.placeholder.com/150" alt="Profile Picture" class="rounded-lg">
           </div>
         </div>
-
-        <!-- Action Buttons -->
-        <div class="mt-6 flex justify-between">
-          <button type="reset" class="px-6 py-2 bg-gray-300 font-bold rounded-lg">Cancel</button>
-          <button type="submit" class="px-6 py-2 bg-red-500 text-white font-bold rounded-lg">Ban</button>
-        </div>
-
-        <!-- Navigation Buttons -->
-        <div class="mt-6 flex justify-between">
-          <button type="button" class="text-blue-500 font-bold">&lt; Previous</button>
-          <button type="button" class="text-blue-500 font-bold">Next &gt;</button>
-        </div>
-      </form>
+      </div>
+      <div class="flex justify-between mt-6">
+        <button onclick="history.back()" class="px-6 py-2 bg-gray-300 font-bold rounded-lg">Cancel</button>
+        <button class="px-6 py-2 bg-red-500 text-white font-bold rounded-lg" onclick=""">Ban</button>
+      </div>
     </section>
   </main>
 </body>
