@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-gray-800 text-white p-4">
+    <nav class="flex justify-between items-center">
+      <ul class="flex space-x-4">
+        <li><a href="#" class="text-2xl font-bold neon">GoPro Gaming</a></li>
+        <li><a href="#" class="text-white">Find Coaches</a></li>
+        <li><a href="browse-bootcamps.html" class="text-white">Bootcamp</a></li>
+        <li><a href="#" class="text-white">Account</a></li>
+        <li><a href="#" class="text-white">Chatroom</a></li>
+        <li><a href="#" class="text-white">Cart</a></li>
+        <li><a href="#" class="text-white">Purchase History</a></li>
+      </ul>
+      <ul class="flex space-x-4">
+        <li><a href="#" class="text-white">Report</a></li>
+        <li><a href="#" class="text-white">Contact Us</a></li>
+        <li><a href="#" class="text-white">Get Help/Support</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="p-8">
+    <section class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+      <h1 class="text-2xl font-bold mb-4 text-gray-800">View Cart</h1>
+      
+      <!-- Cart Items -->
+      <div class="space-y-4 text-gray-800">
+        <div class="flex justify-between items-center bg-gray-100 p-4 rounded-lg shadow">
+          <span>Item #1</span>
+          <span>$99</span>
+        </div>
+        <div class="flex justify-between items-center bg-gray-100 p-4 rounded-lg shadow">
+          <span>Item #2</span>
+          <span>$49</span>
+        </div>
+        <div class="flex justify-between items-center bg-gray-100 p-4 rounded-lg shadow">
+          <span>Item #3</span>
+          <span>$200</span>
+        </div>
+        <button class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-2xl font-bold text-gray-600 mx-auto shadow">
+          +
+        </button>
+      </div>
+
+      <!-- Total Section -->
+      <div class="mt-8 p-6 bg-gray-100 rounded-lg shadow text-gray-800">
+        <h2 class="text-xl font-bold mb-4">Total</h2>
+        <p class="mb-4">Total Price: <span class="font-bold">$348</span></p>
+        <input type="text" placeholder="Add coupon code" class="w-full p-2 mb-4 border border-gray-300 rounded-lg">
+        
+        <!-- Payment Methods -->
+        <div class="flex justify-around mb-4">
+          <button class="bg-gray-200 px-4 py-2 rounded-lg shadow">Paypal</button>
+          <button class="bg-gray-200 px-4 py-2 rounded-lg shadow">Visa</button>
+          <button class="bg-gray-200 px-4 py-2 rounded-lg shadow">Master</button>
+        </div>
+        
+        <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 rounded-lg shadow">
+          Pay Now
+        </button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

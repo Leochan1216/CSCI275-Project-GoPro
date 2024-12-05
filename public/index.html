@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GoPro Gamers</title>
+    <title>GoPro Gaming</title>
 
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/10.13.2/firebase-app-compat.js"></script>
@@ -28,67 +28,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="bg-dark-blue text-gray-300">
-    <!-- Navigation Bar -->
-    <nav class="w-full p-4 flex justify-between items-center bg-gray-900">
-        <div class="text-xl font-bold text-white">E-Sports Coaching</div>
-        <div>
-            <a href="#" class="text-white text-2xl"><i class="fas fa-user-circle"></i></a>
-        </div>
-    </nav>
-
-    <!-- Home Page -->
-    <div class="min-h-screen flex flex-col items-center justify-center text-center">
-        <div class="w-full max-w-4xl p-8">
-            <h1 class="text-5xl font-bold text-white mb-4">Connect with Pro Gamers, Play, and Learn</h1>
-            <p class="text-lg mb-8">Get coached by the best gamers or join exclusive bootcamps to level up your game anytime, anywhere.</p>
-            <div class="flex justify-center space-x-4">
-                <a href="#find-pro" class="neon-button">Find Your Pro Gamer</a>
-                <a href="#browse-bootcamps" class="neon-button">Browse Bootcamps</a>
+  <body>
+    <header class="flex justify-between p-4 bg-gray-900">
+        <div class="text-2xl font-bold neon">GoPro Gaming</div>
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="text-white">Find Coaches</a></li>
+                <li><a href="#" class="text-white">Bootcamp</a></li>
+                <li><a href="#" class="text-white">Login</a></li>
+                <li><a href="#" class="text-white">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="p-8">
+        <h1 class="text-4xl font-bold neon mb-4">Level Up Your Game with Expert Coaching</h1>
+        <p class="mb-8">Discover your full gaming potential with our innovative app that connects you directly with professional gaming coaches. Whether you're a casual player looking to improve or an aspiring pro aiming for the top ranks, our platform offers personalized coaching tailored to your needs. Get strategic insights, real-time feedback, and customized training sessions across a variety of games and genres. Easy to use and packed with features, our app is your gateway to elevating your gameplay. Start your journey toward gaming greatness today!</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <div class="card p-4">
+                <button class="button w-full p-2 rounded">Find a random Pro Gamer</button>
+            </div>
+            <div class="card p-4">
+                <button class="button w-full p-2 rounded">Browse Bootcamps</button>
+            </div>
+            <div class="card p-4">
+                <button class="button w-full p-2 rounded">Find your Pro Gamer</button>
             </div>
         </div>
-        <div class="w-full max-w-4xl p-8 mt-12">
-            <h2 class="text-3xl font-bold text-white mb-4">Featured Games</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="neon-card p-4 bg-gray-800 rounded-lg">
-                    <img src="https://placehold.co/100x100" alt="Game 1 Logo" class="mx-auto mb-2">
-                    <p>Game 1</p>
-                </div>
-                <div class="neon-card p-4 bg-gray-800 rounded-lg">
-                    <img src="https://placehold.co/100x100" alt="Game 2 Logo" class="mx-auto mb-2">
-                    <p>Game 2</p>
-                </div>
-                <div class="neon-card p-4 bg-gray-800 rounded-lg">
-                    <img src="https://placehold.co/100x100" alt="Game 3 Logo" class="mx-auto mb-2">
-                    <p>Game 3</p>
-                </div>
-                <div class="neon-card p-4 bg-gray-800 rounded-lg">
-                    <img src="https://placehold.co/100x100" alt="Game 4 Logo" class="mx-auto mb-2">
-                    <p>Game 4</p>
-                </div>
-            </div>
+        <h2 class="text-2xl font-bold neon mb-4">Trending Games</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="card h-40"></div>
+            <div class="card h-40"></div>
+            <div class="card h-40"></div>
+            <div class="card h-40"></div>
+            <div class="card h-40"></div>
+            <div class="card h-40"></div>
         </div>
-        <div class="w-full max-w-4xl p-8 mt-12">
-            <h2 class="text-3xl font-bold text-white mb-4">How It Works</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <div class="p-4 bg-gray-800 rounded-lg text-center">
-                    <i class="fas fa-gamepad text-4xl mb-2"></i>
-                    <p>Choose a Game</p>
-                </div>
-                <div class="p-4 bg-gray-800 rounded-lg text-center">
-                    <i class="fas fa-user text-4xl mb-2"></i>
-                    <p>Pick a Pro</p>
-                </div>
-                <div class="p-4 bg-gray-800 rounded-lg text-center">
-                    <i class="fas fa-calendar-alt text-4xl mb-2"></i>
-                    <p>Book a Session</p>
-                </div>
-                <div class="p-4 bg-gray-800 rounded-lg text-center">
-                    <i class="fas fa-chalkboard-teacher text-4xl mb-2"></i>
-                    <p>Get Coached</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
+    </main>
+    </body>
 </html>

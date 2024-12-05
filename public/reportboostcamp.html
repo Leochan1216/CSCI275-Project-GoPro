@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Bootcamp</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Additional custom styling */
+    .report-header {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    textarea {
+      resize: none; /* Disable resizing for cleaner UI */
+    }
+    button:hover {
+      background-color: #2563eb;
+    }
+  </style>
+</head>
+<body=>
+  <!-- Header -->
+  <header class="bg-gray-800 text-white p-4">
+    <nav class="flex justify-between items-center">
+      <ul class="flex space-x-4">
+        <li><a href="#" class="text-2xl font-bold neon">GoPro Gamming</a></li>
+        <li><a href="#" class="text-white">Find Coaches</a></li>
+        <li><a href="#" class="text-white">Bootcamp</a></li>
+        <li><a href="#" class="text-white">Account</a></li>
+        <li><a href="#" class="text-white">Chatroom</a></li>
+        <li><a href="#" class="text-white">Cart</a></li>
+        <li><a href="#" class="text-white">Purchase History</a></li>
+      </ul>
+      <ul class="flex space-x-4">
+        <li><a href="#" class="text-white">Report</a></li>
+        <li><a href="#" class="text-white">Contact Us</a></li>
+        <li><a href="#" class="text-white">Get Help/Support</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="p-8">
+    <section class="max-w-4xl mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
+      <h1 class="report-header mb-6">Report</h1>
+      <p class="mb-6">
+        We're committed to maintaining a safe and secure environment for all our users. If you’ve encountered an issue or wish to report a concern, you’re in the right place. Please use the appropriate option below to let us know how we can help.
+      </p>
+
+      <form>
+        <!-- Bootcamp/ProGamer Selection -->
+        <div class="mb-4">
+          <label for="bootcamp" class="block font-bold mb-2">Bootcamp/ProGamer</label>
+          <select id="bootcamp" name="bootcamp" class="w-full p-2 border border-gray-800 rounded-lg">
+            <option value="" disabled selected>Select an option</option>
+            <option value="bootcamp1">Bootcamp 1</option>
+            <option value="bootcamp2">Bootcamp 2</option>
+            <option value="progamer1">Pro Gamer 1</option>
+          </select>
+        </div>
+
+        <!-- ID Field -->
+        <div class="mb-4">
+            <label for="id" class="block font-bold mb-2">ID</label>
+            <input type="text" id="id" name="id" placeholder="Enter ID" class="w-full p-2 border border-gray-300 rounded-lg text-gray-800">
+          </div>
+          
+          <!-- Reason Field -->
+          <div class="mb-4">
+            <label for="reason" class="block font-bold mb-2">Reason</label>
+            <input type="text" id="reason" name="reason" placeholder="Enter reason" class="w-full p-2 border border-gray-300 rounded-lg text-gray-800">
+          </div>
+          
+          <!-- Message Field -->
+          <div class="mb-4">
+            <label for="message" class="block font-bold mb-2">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Describe the issue..." class="w-full p-2 border border-gray-300 rounded-lg text-gray-800"></textarea>
+          </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
