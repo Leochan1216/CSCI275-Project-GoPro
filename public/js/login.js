@@ -7,6 +7,18 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
+
+const login = async (email, password) => {
+  try {
+    const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
+    const user = userCredential.user;
+    console.log("User logged in:", user);
+  } catch (error) {
+    console.error("Error logging in:", error.message);
+  }
+};
+
+
 // Handle Login Form Submission
 document.getElementById('login-form').addEventListener('submit', async (event) => {
   event.preventDefault();

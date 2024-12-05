@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login - GoPro Gaming</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -12,7 +12,8 @@
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"></script>
     <script defer src="js/login.js"></script>
 </head>
-<body>
+
+<body class="bg-gray-900 text-white">
     <!-- Header -->
     <header class="bg-gray-900 p-4">
         <nav class="flex justify-between items-center">
@@ -57,17 +58,19 @@
 
                 <!-- Login Button -->
                 <button 
-                    type="submit" 
-                    class="w-full p-3 rounded bg-blue-500 hover:bg-blue-600 text-white font-bold mb-4">
-                    Login
-                </button>
+                type="button" 
+                class="w-full p-3 rounded bg-blue-500 hover:bg-blue-600 text-white font-bold mb-4"
+                onclick="window.location.href='indexA(login).html';">
+                Login
+            </button>
+            
             </form>
 
             <!-- Alternative Login Options -->
             <div class="text-center">
                 <p class="text-sm text-gray-400 mb-4">Or login with</p>
                 <div class="flex justify-around">
-                    <button class="p-3 bg-white rounded-full text-gray-800 flex items-center justify-center">
+                    <button class="p-3 bg-white rounded-full text-gray-800 flex items-center justify-center" onclick="googleSignIn()">
                         <i class="fab fa-google mr-2"></i> Google
                     </button>
                     <button class="p-3 bg-white rounded-full text-gray-800 flex items-center justify-center">
@@ -80,5 +83,59 @@
             </div>
         </div>
     </main>
+
+    <!-- Firebase SDK and Login Script -->
+    <script>
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBoDFigDq6dgKownjXf0-C2WgLpEbuKRMw",
+            authDomain: "csci275-project-gopro.web.app",
+            projectId: "go-pro-9f9e9",
+            storageBucket: "go-pro-9f9e9.firebasestorage.app",
+            messagingSenderId: "1030451674360",
+            appId: "1:1030451674360:web:dfe5fc5a83e09db0990f0d",
+            measurementId: "G-XVHRB6CT38"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const googleProvider = new firebase.auth.GoogleAuthProvider();
+
+        // Google Sign-In function
+        const googleSignIn = async () => {
+            try {
+                const result = await auth.signInWithPopup(googleProvider);
+                const user = result.user;
+                console.log("Google Sign-In successful:", user);
+                alert("Login successful with Google!");
+                // Redirect or take appropriate action after successful login
+                window.location.href = "dashboard.html";  // Example redirection
+            } catch (error) {
+                console.error("Error with Google Sign-In:", error.message);
+                alert("Error with Google Sign-In: " + error.message);
+            }
+        };
+
+        // Form Login Process
+        document.getElementById("login-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            try {
+                const userCredential = await auth.signInWithEmailAndPassword(email, password);
+                const user = userCredential.user;
+                console.log("Login successful:", user);
+                alert("Login successful!");
+                // Redirect or take appropriate action after successful login
+                window.location.href = "dashboard.html";  // Example redirection
+            } catch (error) {
+                console.error("Error logging in:", error.message);
+                alert("Error logging in: " + error.message);
+            }
+        });
+    </script>
 </body>
 </html>

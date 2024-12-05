@@ -1,3 +1,31 @@
+// login.js
+import { auth } from './firebase';  // Import Firebase Authentication
+
+// Sign up new users
+const signUp = async (email, password) => {
+  try {
+    const userCredential = await auth.createUserWithEmailAndPassword(email, password);
+    const user = userCredential.user;
+    console.log("User created:", user);
+  } catch (error) {
+    console.error("Error signing up:", error.message);
+  }
+};
+
+// Log in existing users
+const login = async (email, password) => {
+  try {
+    const userCredential = await auth.signInWithEmailAndPassword(email, password);
+    const user = userCredential.user;
+    console.log("User logged in:", user);
+  } catch (error) {
+    console.error("Error logging in:", error.message);
+  }
+};
+
+
+
+
 document.getElementById('signup-form').addEventListener('submit', (event) => {
   event.preventDefault();
 

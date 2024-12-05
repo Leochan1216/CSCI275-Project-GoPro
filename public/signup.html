@@ -63,7 +63,7 @@
       <div class="text-center font-bold text-gray-400 mb-4">OR</div>
       <!-- Alternative Sign-Up Options -->
       <div class="flex flex-col space-y-2">
-        <button class="button w-full flex items-center justify-center bg-white p-2 rounded hover:bg-gray-600">
+        <button class="button w-full flex items-center justify-center bg-white p-2 rounded hover:bg-gray-600" onclick="googleSignIn()">
           <i class="fab fa-google mr-2"></i> Sign Up with Google
         </button>
         <button class="button w-full flex items-center justify-center bg-white p-2 rounded hover:bg-gray-600">
@@ -75,5 +75,78 @@
       </div>
     </div>
   </main>
+
+  <!-- Firebase SDK and Sign Up Script -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script>
+    // Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBoDFigDq6dgKownjXf0-C2WgLpEbuKRMw",
+      authDomain: "csci275-project-gopro.web.app",
+      projectId: "go-pro-9f9e9",
+      storageBucket: "go-pro-9f9e9.firebasestorage.app",
+      messagingSenderId: "1030451674360",
+      appId: "1:1030451674360:web:dfe5fc5a83e09db0990f0d",
+      measurementId: "G-XVHRB6CT38"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const googleProvider = new firebase.auth.GoogleAuthProvider();
+
+    // Google Sign-In function
+    const googleSignIn = async () => {
+      try {
+        const result = await auth.signInWithPopup(googleProvider);
+        const user = result.user;
+        console.log("Google Sign-In successful:", user);
+        alert("Sign-up successful with Google!");
+        // Redirect or take appropriate action after successful sign-up
+      } catch (error) {
+        console.error("Error with Google Sign-In:", error.message);
+        alert("Error with Google Sign-In: " + error.message);
+      }
+    };
+
+    // Form Validation and Sign-Up Process
+    document.getElementById("signup-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirm-password").value;
+
+      // Password validation
+      const passwordValidation = document.getElementById("password-validation");
+      const confirmPasswordValidation = document.getElementById("confirm-password-validation");
+      if (!password.match(/[a-zA-Z]/) || !password.match(/[\W_]/)) {
+        passwordValidation.classList.remove("hidden");
+        return;
+      } else {
+        passwordValidation.classList.add("hidden");
+      }
+
+      // Password confirmation check
+      if (password !== confirmPassword) {
+        confirmPasswordValidation.classList.remove("hidden");
+        return;
+      } else {
+        confirmPasswordValidation.classList.add("hidden");
+      }
+
+      try {
+        // Create new user with Firebase Authentication
+        await auth.createUserWithEmailAndPassword(email, password);
+        alert("Sign-up successful!");
+        // Redirect or take appropriate action after successful sign-up
+      } catch (error) {
+        console.error("Error signing up:", error.message);
+        alert("Error signing up: " + error.message);
+      }
+    });
+  </script>
 </body>
 </html>
