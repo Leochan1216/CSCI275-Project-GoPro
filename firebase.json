@@ -23,6 +23,8 @@
     }
   },
   "functions": {
+    "runtime": "nodejs18",
+    "platform": "gcfv2",
     "source": "functions"
   }
 }

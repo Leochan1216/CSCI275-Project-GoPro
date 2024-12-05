@@ -9,6 +9,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/indexjj.js"></script>
+  <!-- Firebase App (the core Firebase SDK) -->
+<script defer src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+
+<!-- Firebase Authentication -->
+<script defer src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"></script>
+
+<script>
+  // Your Firebase configuration
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT_ID.appspot.com",
+    messagingSenderId: "YOUR_SENDER_ID",
+    appId: "YOUR_APP_ID"
+  };
+
+  // Initialize Firebase
+  const app = firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+</script>
+
 </head>
 <body>
     <!-- Header -->

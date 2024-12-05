@@ -1,0 +1,20 @@
+{
+  "name": "csci275-project-gopro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.11.1",
+    "firebase-functions": "^6.1.1",
+    "mysql": "^2.18.1"
+  }
+}
