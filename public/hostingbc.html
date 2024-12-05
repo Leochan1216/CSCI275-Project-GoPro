@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BootCamp Video Upload</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Custom styles for BootCamp page */
+    .header-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .upload-section {
+      border: 2px dashed #ccc;
+      padding: 20px;
+      background-color: #f9fafb;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .upload-section:hover {
+      border-color: #2563eb;
+    }
+    button:hover {
+      background-color: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-gray-800 text-gray-800 p-4">
+    <nav class="flex justify-between items-center">
+      <ul class="flex space-x-4">
+        <li><a href="#" class="text-2xl font-bold neon">GoPro Gamming</a></li>
+        <li><a href="#" class="text-white">Account</a></li>
+        <li><a href="#" class="text-white">Chat</a></li>
+        <li><a href="#" class="text-white">BootCamp</a></li>
+        <li><a href="#" class="text-white">Report</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="p-8">
+    <section class="max-w-6xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+      <h1 class="header-title mb-6">BootCamp</h1>
+
+      <!-- Video Section -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Video Placeholder -->
+        <div class="upload-section">
+          <video controls class="w-full rounded-lg">
+            <source src="#" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="mt-2 text-gray-500">Upload your bootcamp video</p>
+        </div>
+
+        <!-- BootCamp Description -->
+        <div class="space-y-4 text-gray-800">
+          <p>
+            <strong>Sharpen your aim and elevate your FPS gameplay!</strong> 🎯 In this bootcamp video, we cover the ultimate aiming drills, positioning tactics, and communication strategies to excel in various FPS games. Get ready to level up!
+          </p>
+          <p>
+            <strong>Welcome to the Game Name Pro Bootcamp!</strong> 🎮 This session focuses on mastering lane control, hero selection, and game-winning rotations. Perfect for both casual gamers and competitive climbers.
+          </p>
+          <p>
+            <strong>Drop in, gear up, and survive!</strong> 🪂 In this Battle Royale Bootcamp, you’ll learn advanced looting paths, positioning techniques, and endgame strategies to dominate the battlefield.
+          </p>
+        </div>
+      </div>
+
+      <!-- Upload Button -->
+      <div class="mt-6 text-center">
+        <button class="px-6 py-2 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600">
+          Upload
+        </button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
