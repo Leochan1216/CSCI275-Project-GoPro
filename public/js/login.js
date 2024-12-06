@@ -1,36 +1,37 @@
-// Firebase configuration
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  authDomain: "csci275-project-gopro.web.app",
+  apiKey: "AIzaSyAOZXcPwO3PKKm2Gizmq26aYcS2bNR_Wk8",
+  authDomain: "csci275-project-gopro.firebaseapp.com",
+  projectId: "csci275-project-gopro",
+  storageBucket: "csci275-project-gopro.firebasestorage.app",
+  messagingSenderId: "934685773209",
+  appId: "1:934685773209:web:b401df5d8a44655e8e9708",
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const submit = document.getElementById('submit') 
 
-
-const login = async (email, password) => {
-  try {
-    const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
-    const user = userCredential.user;
-    console.log("User logged in:", user);
-  } catch (error) {
-    console.error("Error logging in:", error.message);
-  }
-};
-
-
-// Handle Login Form Submission
-document.getElementById('login-form').addEventListener('submit', async (event) => {
-  event.preventDefault();
-
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-
-  try {
-      await auth.signInWithEmailAndPassword(email, password);
-      alert('Login successful!');
-      window.location.href = 'indexC(login).html'; // Redirect on successful login
-  } catch (error) {
-      alert(`Error: ${error.message}`);
-  }
+submit.addEventListener("click", function(event){
+    event.preventDefault()
+    //Inputs
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      window.location.href = "indexC(login).html";
+      // ...
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorMessage);
+    });
 });
