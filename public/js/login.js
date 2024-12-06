@@ -29,7 +29,7 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
   try {
       await auth.signInWithEmailAndPassword(email, password);
       alert('Login successful!');
-      window.location.href = 'indexP(login).html'; // Redirect on successful login
+      window.location.href = 'indexC(login).html'; // Redirect on successful login
   } catch (error) {
       alert(`Error: ${error.message}`);
   }
